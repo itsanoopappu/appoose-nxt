@@ -60,7 +60,7 @@ export default function BlogLayout({
             "@context": "https://schema.org",
             "@type": "Recipe",
             "name": "Kerala Style Fresh Tilapia Curry",
-            "description": "Traditional Kerala fish curry made with fresh tilapia from Appoose farm. Chemical-free, high-protein recipe perfect for authentic Malayalam taste.",
+            "description": "Traditional Kerala fish curry made with fresh tilapia from Appoose farm. Chemical-free, authentic recipe perfect for traditional Malayalam taste.",
             "image": "https://appoose.com/images/tilapia-curry.jpg",
             "author": {
               "@type": "Organization",
@@ -75,7 +75,7 @@ export default function BlogLayout({
             "nutrition": {
               "@type": "NutritionInformation",
               "calories": "280 calories",
-              "proteinContent": "22g per serving",
+              "freshness": "Same day harvest fish",
               "fatContent": "12g per serving"
             },
             "recipeIngredient": [

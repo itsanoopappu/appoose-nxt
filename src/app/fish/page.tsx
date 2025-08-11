@@ -17,7 +17,7 @@ export default function FishPage() {
     price: 280,
     bulkPrice: 250,
     bulkMinQty: 5,
-    protein: '22g',
+    freshness: 'Daily Harvest',
     calories: 128,
     fat: '3.2g',
     omega3: 'High',
@@ -28,7 +28,7 @@ export default function FishPage() {
       '/images/tilapia-thumb3.jpg'
     ],
     benefits: [
-      '✅ <strong>High-protein fish perfect for bodybuilding</strong> - 22g protein per 100g',
+      '✅ <strong>Fresh daily harvest from our pond</strong> - Caught fresh every morning',
       '✅ <strong>Premium feed tilapia</strong> - Fed only natural, high-quality feed',
       '✅ <strong>Chemical-free farming</strong> - No antibiotics or hormones',
       '✅ <strong>Fresh daily harvest</strong> - Caught fresh every morning',
@@ -36,7 +36,7 @@ export default function FishPage() {
     ],
     rating: 4.9,
     reviewCount: 127,
-    description: 'Premium tilapia raised in clean pond water with natural feed, perfect for high-protein diets and bodybuilding.',
+    description: 'Premium tilapia raised in clean pond water with natural feed, perfect for authentic Kerala fish curry and traditional recipes.'
     onAddToCart: handleAddToCart
   };
 
@@ -46,7 +46,7 @@ export default function FishPage() {
     price: 320,
     bulkPrice: 290,
     bulkMinQty: 5,
-    protein: '24g',
+    freshness: 'Same-Day Fresh',
     calories: 135,
     fat: '3.8g',
     omega3: 'Very High',
@@ -57,7 +57,7 @@ export default function FishPage() {
       '/images/varal-thumb3.jpg'
     ],
     benefits: [
-      '✅ <strong>Highest protein content</strong> - 24g protein per 100g',
+      '✅ <strong>Premium local variety</strong> - Traditional Kerala backwater fish',
       '✅ <strong>Local favorite variety</strong> - Preferred taste and texture',
       '✅ <strong>Excellent for traditional recipes</strong> - Perfect for curry and fry',
       '✅ <strong>Rich in Omega-3 fatty acids</strong> - Heart-healthy choice',

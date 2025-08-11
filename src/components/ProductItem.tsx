@@ -9,7 +9,7 @@ interface ProductItemProps {
   price: number;
   bulkPrice?: number;
   bulkMinQty?: number;
-  protein: string;
+  freshness: string;
   calories: number;
   fat: string;
   omega3: string;
@@ -36,7 +36,7 @@ export default function ProductItem({
   price,
   bulkPrice,
   bulkMinQty = 5,
-  protein,
+  freshness,
   calories,
   fat,
   omega3,
@@ -148,8 +148,8 @@ export default function ProductItem({
             "additionalProperty": [
               {
                 "@type": "PropertyValue",
-                "name": "Protein Content",
-                "value": protein + " per 100g"
+                "name": "Freshness Guarantee",
+                "value": freshness
               },
               {
                 "@type": "PropertyValue", 

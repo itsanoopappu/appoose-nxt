@@ -23,8 +23,8 @@ export default function HomeHero() {
               <span>Fresh Daily Delivery</span>
             </div>
             <div className="feature">
-              <span className="feature-icon">💪</span>
-              <span>High-Protein Quality</span>
+              <span className="feature-icon">⭐</span>
+              <span>Premium Quality</span>
             </div>
           </div>
           <div className="hero-cta">

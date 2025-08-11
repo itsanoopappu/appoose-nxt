@@ -9,13 +9,13 @@ const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'Complete Guide to Tilapia Fish Nutrition Facts',
-    excerpt: 'Discover why tilapia is considered one of the best high-protein fish for bodybuilding and healthy eating. Complete breakdown of nutrition facts and health benefits.',
+    excerpt: 'Discover why tilapia is the perfect choice for Kerala fish curry and traditional recipes. Complete guide to freshness, taste, and culinary benefits.',
     category: 'Nutrition',
     categoryColor: 'green',
     readTime: '8 min read',
     author: 'Dr. Nutritionist',
     date: 'Jan 15, 2025',
-    tags: ['Nutrition', 'Tilapia', 'Protein', 'Health'],
+    tags: ['Nutrition', 'Tilapia', 'Freshness', 'Health'],
     featured: true
   },
   {
@@ -144,7 +144,7 @@ export default function BlogPage() {
                               <h4>Key Nutrition Facts (per 100g)</h4>
                               <div className="nutrition-grid">
                                 <div className="nutrition-item">
-                                  <span className="nutrient">Protein</span>
+                                  <span className="nutrient">Freshness</span>
                                   <span className="value">22g</span>
                                 </div>
                                 <div className="nutrition-item">
@@ -165,7 +165,7 @@ export default function BlogPage() {
                               <h5>What You&apos;ll Learn:</h5>
                               <ul>
                                 <li>Complete nutritional breakdown with daily values</li>
-                                <li>Why tilapia is perfect for high-protein diets</li>
+                                <li>Why tilapia is perfect for traditional Kerala recipes</li>
                                 <li>Health benefits and cooking recommendations</li>
                                 <li>Comparison with other fish varieties</li>
                               </ul>
@@ -181,7 +181,7 @@ export default function BlogPage() {
                                 <span>⏱️ 25 min</span>
                                 <span>👥 Serves 4</span>
                                 <span>🔥 165 cal</span>
-                                <span>💪 22g protein</span>
+                                <span>✨ Daily Fresh</span>
                               </div>
                             </div>
                             <div className="content-preview">
@@ -203,7 +203,7 @@ export default function BlogPage() {
                               <h4>Varal vs Tilapia Comparison</h4>
                               <div className="comparison-grid">
                                 <div className="comparison-item">
-                                  <span className="metric">Protein</span>
+                                  <span className="metric">Freshness</span>
                                   <span className="varal">24g</span>
                                   <span className="vs">vs</span>
                                   <span className="tilapia">22g</span>

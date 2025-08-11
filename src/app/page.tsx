@@ -17,13 +17,13 @@ export default function Home() {
             <div className="product-card">
               <Image 
                 src="/images/tilapia-product.jpg" 
-                alt="Fresh Tilapia Fish - High Protein" 
+                alt="Fresh Tilapia Fish - Premium Quality" 
                 width={300} 
                 height={200}
                 loading="lazy"
               />
               <h3>Fresh Tilapia</h3>
-              <p className="product-protein">22g protein per 100g</p>
+              <p className="product-freshness">Daily harvest guarantee</p>
               <p className="product-price">₹280/kg</p>
               <p className="product-description">Premium tilapia raised in clean pond water with natural feed</p>
               <Link href="/fish#tilapia" className="btn btn-product">Order Now</Link>
@@ -37,7 +37,7 @@ export default function Home() {
                 loading="lazy"
               />
               <h3>Fresh Varal Fish</h3>
-              <p className="product-protein">24g protein per 100g</p>
+              <p className="product-freshness">Same-day fresh delivery</p>
               <p className="product-price">₹320/kg</p>
               <p className="product-description">Locally preferred varal fish with excellent taste and nutrition</p>
               <Link href="/fish#varal" className="btn btn-product">Order Now</Link>
