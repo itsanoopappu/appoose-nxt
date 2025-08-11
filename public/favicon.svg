@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="fishGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Fish body -->
+  <ellipse cx="16" cy="16" rx="12" ry="8" fill="url(#fishGradient)" stroke="#065f46" stroke-width="1"/>
+  <!-- Fish tail -->
+  <polygon points="4,16 8,12 8,20" fill="url(#fishGradient)" stroke="#065f46" stroke-width="1"/>
+  <!-- Fish eye -->
+  <circle cx="20" cy="14" r="2" fill="white"/>
+  <circle cx="21" cy="13.5" r="1" fill="#1f2937"/>
+  <!-- Fish fins -->
+  <ellipse cx="16" cy="24" rx="4" ry="2" fill="url(#fishGradient)" stroke="#065f46" stroke-width="0.5"/>
+  <ellipse cx="16" cy="8" rx="4" ry="2" fill="url(#fishGradient)" stroke="#065f46" stroke-width="0.5"/>
+  <!-- Fresh indicator dot -->
+  <circle cx="26" cy="8" r="2" fill="#10b981" stroke="#065f46" stroke-width="0.5"/>
+</svg>

@@ -1611,6 +1611,7 @@ section {
 
 .action-buttons {
   display: flex;
+  flex-direction: column;
   gap: var(--space-lg);
   margin-bottom: var(--space-lg);
 }

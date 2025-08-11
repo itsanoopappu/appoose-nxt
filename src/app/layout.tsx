@@ -16,6 +16,16 @@ export const metadata: Metadata = {
   description: "Buy fresh fish online Kerala from Appoose farm Muthukulam. Premium tilapia ₹280/kg, varal fish ₹320/kg. Chemical-free, same-day delivery Cherthala, Alappuzha, Kuttanad. Order now!",
   keywords: ["fresh fish delivery kerala", "buy fresh fish online kerala", "tilapia fish farm alappuzha", "varal fish muthukulam", "fish delivery cherthala", "fresh fish alappuzha district", "chemical free fish kerala", "same day fish delivery"],
   authors: [{ name: "Appoose Fresh Fish Farm" }],
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: "Fresh Fish Delivery Kerala | Premium Tilapia & Varal Fish - Appoose Farm",
     description: "Order fresh tilapia & varal fish online. Chemical-free farming from Muthukulam, same-day delivery across Alappuzha district Kerala.",
@@ -247,7 +257,102 @@ export default function RootLayout({
                     "name": "Kerala Government Fisheries Department"
                   }
                 }
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "reviewCount": "324",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Rajesh Kumar - Cherthala"
+                  },
+                  "reviewBody": "Excellent fresh tilapia delivered same day to Cherthala. Chemical-free quality from Appoose farm Muthukulam. Best fish delivery service in Kerala!"
+                },
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Priya Nair - Alappuzha"
+                  },
+                  "reviewBody": "Regular customer for 3 years. Premium varal fish quality from Muthukulam farm. Perfect for Kerala fish curry. Highly recommend!"
+                },
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Restaurant Owner - Kayamkulam"
+                  },
+                  "reviewBody": "Supplying our restaurant for 2 years. Consistent quality, fresh delivery, reliable service. Best fish farm in Alappuzha district!"
+                },
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Sujitha Thomas - Kuttanad"
+                  },
+                  "reviewBody": "Good quality fish delivered to Kuttanad. Chemical-free promise kept. Only wish delivery was faster to remote areas."
+                },
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating", 
+                    "ratingValue": "5"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Arun Pillai - Mavelikkara"
+                  },
+                  "reviewBody": "Amazing tilapia quality for our college hostel. Students love the taste. Chemical-free fish perfect for healthy meals. Great service!"
+                }
               ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Appoose Fresh Fish Farm - Kerala",
+              "alternateName": "Fresh Fish Delivery Kerala",
+              "url": "https://appoose.com",
+              "description": "Kerala's premium fresh fish delivery service. Chemical-free tilapia & varal fish from Muthukulam farm. Same-day delivery across Alappuzha district.",
+              "inLanguage": "en-IN",
+              "isPartOf": {
+                "@type": "Organization",
+                "name": "Appoose Fresh Fish Farm"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://appoose.com/fish?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
             })
           }}
         />

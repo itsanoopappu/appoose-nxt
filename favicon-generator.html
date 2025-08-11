@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="favicon" width="32" height="32"></canvas>
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+        
+        // Set background
+        ctx.fillStyle = '#0ea5e9';
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // Draw fish body (ellipse)
+        ctx.fillStyle = '#0369a1';
+        ctx.beginPath();
+        ctx.ellipse(16, 16, 11, 7, 0, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Draw fish tail
+        ctx.fillStyle = '#0369a1';
+        ctx.beginPath();
+        ctx.moveTo(5, 16);
+        ctx.lineTo(9, 12);
+        ctx.lineTo(9, 20);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Draw fish eye
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(20, 14, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Draw fish eye pupil
+        ctx.fillStyle = '#1f2937';
+        ctx.beginPath();
+        ctx.arc(21, 13.5, 1, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Draw fresh indicator
+        ctx.fillStyle = '#10b981';
+        ctx.beginPath();
+        ctx.arc(26, 8, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Convert to ICO and download
+        canvas.toBlob(function(blob) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'favicon.ico';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
+    <p>Favicon will download automatically. Save it as favicon.ico in your app folder.</p>
+</body>
+</html>

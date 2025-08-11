@@ -160,8 +160,43 @@ export default function ProductItem({
                 "@type": "PropertyValue",
                 "name": "Delivery Area",
                 "value": "Alappuzha District, Kerala"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Farm Location",
+                "value": "Muthukulam, Alappuzha, Kerala"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Harvesting",
+                "value": "Fresh daily harvest from sustainable pond"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Delivery Speed",
+                "value": "Same-day delivery available"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Feed Quality",
+                "value": "Premium natural feed - No antibiotics"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Water Source",
+                "value": "Clean Kerala backwater ecosystem"
               }
-            ]
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "returnFees": "https://schema.org/FreeReturn",
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnWithin": "P1D"
+            },
+            "category": "Fresh Fish Kerala",
+            "gtin": "APPOOSE-" + id.toUpperCase() + "-Kerala",
+            "mpn": "APO-" + id + "-Muthukulam"
           })
         }}
       />
