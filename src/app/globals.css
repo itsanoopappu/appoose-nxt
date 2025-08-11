@@ -381,7 +381,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-md) var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
 }
 
 .nav-brand {
@@ -389,8 +389,8 @@ section {
 }
 
 .logo {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--primary-blue);
   text-decoration: none;
   margin: 0;
@@ -417,6 +417,9 @@ section {
 
 .nav-cta {
   z-index: 101;
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
 }
 
 .nav-toggle {
@@ -1077,8 +1080,7 @@ section {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  margin-right: var(--space-lg);
-  padding: var(--space-xs);
+  padding: var(--space-sm);
   border-radius: var(--radius-md);
   transition: background-color 0.2s ease;
   min-height: 44px; /* Minimum touch target size */
