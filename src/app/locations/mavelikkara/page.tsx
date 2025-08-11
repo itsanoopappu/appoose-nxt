@@ -213,7 +213,7 @@ export default function MavelikkaraDeliveryPage() {
               <Link href="/fish" className="btn btn-outline">Order Family Pack</Link>
             </div>
             <div className="support-card">
-              <div support-icon">🍽️</div>
+              <div className="support-icon">🍽️</div>
               <h3>PG & Mess Supply</h3>
               <p>Supporting student accommodation</p>
               <ul>
