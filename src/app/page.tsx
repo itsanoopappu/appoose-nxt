@@ -1,103 +1,139 @@
-import Image from "next/image";
+import HomeHero from '@/components/HomeHero';
+import ContactForm from '@/components/ContactForm';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <HomeHero />
+      
+      {/* Products Preview */}
+      <section className="products-preview">
+        <div className="container">
+          <h2 className="section-title">Our Fresh Fish Products</h2>
+          
+          <div className="products-grid" id="fish-products">
+            <div className="product-card">
+              <Image 
+                src="/images/tilapia-product.jpg" 
+                alt="Fresh Tilapia Fish - High Protein" 
+                width={300} 
+                height={200}
+                loading="lazy"
+              />
+              <h3>Fresh Tilapia</h3>
+              <p className="product-protein">22g protein per 100g</p>
+              <p className="product-price">₹280/kg</p>
+              <p className="product-description">Premium tilapia raised in clean pond water with natural feed</p>
+              <Link href="/fish#tilapia" className="btn btn-product">Order Now</Link>
+            </div>
+            <div className="product-card">
+              <Image 
+                src="/images/varal-product.jpg" 
+                alt="Fresh Varal Fish - Premium Quality" 
+                width={300} 
+                height={200}
+                loading="lazy"
+              />
+              <h3>Fresh Varal Fish</h3>
+              <p className="product-protein">24g protein per 100g</p>
+              <p className="product-price">₹320/kg</p>
+              <p className="product-description">Locally preferred varal fish with excellent taste and nutrition</p>
+              <Link href="/fish#varal" className="btn btn-product">Order Now</Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="why-choose-us">
+        <div className="container">
+          <h2 className="section-title">Why Choose Our Fish Farm?</h2>
+          <div className="benefits-grid">
+            <div className="benefit">
+              <div className="benefit-icon">🏆</div>
+              <h3>Premium Quality Guarantee</h3>
+              <p>Sourced fresh daily from our sustainable aquaculture ponds with premium feed</p>
+            </div>
+            <div className="benefit">
+              <div className="benefit-icon">🚫</div>
+              <h3>100% Chemical-Free</h3>
+              <p>No hormones, no antibiotics, no harmful chemicals - just natural pond-raised fish</p>
+            </div>
+            <div className="benefit">
+              <div className="benefit-icon">⚡</div>
+              <h3>Same-Day Fresh Delivery</h3>
+              <p>Order before 2 PM and get fresh fish delivered to your door the same day</p>
+            </div>
+            <div className="benefit">
+              <div className="benefit-icon">💰</div>
+              <h3>Best Price Direct from Farm</h3>
+              <p>Direct from farm pricing means no middlemen markup - best prices for all quantities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="pricing">
+        <div className="container">
+          <h2 className="section-title">Today's Fish Prices</h2>
+          <div className="pricing-grid">
+            <div className="pricing-card">
+              <h3>Retail Customers</h3>
+              <div className="price-item">
+                <span className="fish-name">Fresh Tilapia</span>
+                <span className="price">₹280/kg</span>
+              </div>
+              <div className="price-item">
+                <span className="fish-name">Varal Fish</span>
+                <span className="price">₹320/kg</span>
+              </div>
+              <p className="pricing-note">Minimum order: 1kg | Free delivery above ₹500</p>
+              <Link href="/fish" className="btn btn-pricing">Order Now</Link>
+            </div>
+            <div className="pricing-card featured">
+              <div className="featured-badge">Most Popular</div>
+              <h3>Bulk Orders (5kg+)</h3>
+              <div className="price-item">
+                <span className="fish-name">Fresh Tilapia</span>
+                <span className="price">₹250/kg</span>
+              </div>
+              <div className="price-item">
+                <span className="fish-name">Varal Fish</span>
+                <span className="price">₹290/kg</span>
+              </div>
+              <p className="pricing-note">Perfect for families & small restaurants</p>
+              <Link href="/fish" className="btn btn-pricing">Order Bulk</Link>
+            </div>
+            <div className="pricing-card">
+              <h3>Large Orders (25kg+)</h3>
+              <div className="price-item">
+                <span className="fish-name">Fresh Tilapia</span>
+                <span className="price">₹220/kg</span>
+              </div>
+              <div className="price-item">
+                <span className="fish-name">Varal Fish</span>
+                <span className="price">₹260/kg</span>
+              </div>
+              <p className="pricing-note">For restaurants, hotels & caterers</p>
+              <a href="tel:+91-7510940508" className="btn btn-pricing">Call for Quote</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="contact-section">
+        <div className="container">
+          <h2 className="section-title">Order Fresh Fish Today</h2>
+          <div className="contact-content">
+            <ContactForm className="contact-form-container" />
+          </div>
+        </div>
+      </section>
+
+    </>
   );
 }

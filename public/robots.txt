@@ -1,0 +1,21 @@
+# Robots.txt for Appoose Fresh Fish Farm - Kerala
+User-agent: *
+Allow: /
+
+# Priority pages for crawling
+Allow: /fish
+Allow: /locations
+Allow: /locations/cherthala
+Allow: /locations/alappuzha
+Allow: /blog
+
+# Prevent indexing of admin/backend pages
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /cart
+
+# Sitemap location
+Sitemap: https://appoose.com/sitemap.xml
+
+# Fresh fish delivery Kerala - Muthukulam farm serving Alappuzha district
