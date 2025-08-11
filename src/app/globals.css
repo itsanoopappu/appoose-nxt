@@ -1921,7 +1921,7 @@ section {
   }
   
   .product-pricing {
-    background: linear-gradient(135deg, var(--gray-50), var(--white));
+    background: var(--white);
     padding: var(--space-lg);
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-lg);
@@ -1971,10 +1971,9 @@ section {
   
   .order-section {
     background: var(--white);
-    border: 2px solid var(--gray-100);
-    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
     padding: var(--space-lg);
-    box-shadow: var(--shadow-sm);
   }
   
   .quantity-section {
@@ -1993,10 +1992,10 @@ section {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    background: var(--gray-50);
+    background: var(--white);
     padding: var(--space-sm);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-300);
   }
   
   .quantity-btn {
@@ -2039,11 +2038,11 @@ section {
   }
   
   .price-summary {
-    background: var(--gray-50);
+    background: var(--white);
     padding: var(--space-lg);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     margin-bottom: var(--space-lg);
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-300);
   }
   
   .price-breakdown, .total-price, .savings-display {
@@ -2086,26 +2085,26 @@ section {
   }
   
   .add-to-cart {
-    background: linear-gradient(135deg, var(--success), var(--success-light));
+    background: var(--primary-blue);
     border: none;
-    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+    color: var(--white);
   }
   
   .add-to-cart:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+    background: var(--primary-blue-dark);
+    transform: translateY(-1px);
   }
   
   .buy-now {
-    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
-    border: none;
-    color: var(--white);
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+    background: var(--white);
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
   }
   
   .buy-now:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
+    background: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-1px);
   }
   
   .quick-actions {
@@ -2120,22 +2119,21 @@ section {
     align-items: center;
     gap: var(--space-xs);
     padding: var(--space-md);
-    background: var(--gray-50);
-    border-radius: var(--radius-lg);
+    background: var(--white);
+    border-radius: var(--radius-md);
     text-decoration: none;
     color: var(--gray-700);
-    font-weight: 600;
+    font-weight: 500;
     transition: all var(--transition-fast);
     min-height: 80px;
     justify-content: center;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-300);
   }
   
   .quick-action:hover {
-    background: var(--primary-blue);
-    color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    background: var(--gray-50);
+    color: var(--primary-blue);
+    transform: translateY(-1px);
   }
   
   .action-icon {
