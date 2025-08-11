@@ -438,6 +438,20 @@ section {
   background: var(--primary-blue);
   margin: 3px 0;
   transition: 0.3s;
+  display: block;
+}
+
+/* Hamburger to X animation */
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Hero styles */
@@ -619,10 +633,22 @@ section {
     gap: var(--space-2xl);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    z-index: 200;
   }
   
   .nav-menu-open {
     transform: translateX(0);
+  }
+  
+  .nav-menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
   
   .nav-toggle {
