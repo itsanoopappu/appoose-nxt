@@ -10,7 +10,7 @@ export default function BlogInteractive() {
     const articleCount = document.getElementById('article-count');
     
     filterBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function(this: HTMLButtonElement) {
         const category = this.getAttribute('data-category');
         
         // Update active button
@@ -21,7 +21,7 @@ export default function BlogInteractive() {
         let visibleCount = 0;
         articleCards.forEach(card => {
           const cardCategories = card.getAttribute('data-category');
-          if (category === 'all' || cardCategories?.includes(category)) {
+          if (category === 'all' || (cardCategories && category && cardCategories.includes(category))) {
             (card as HTMLElement).style.display = 'block';
             visibleCount++;
           } else {
@@ -95,7 +95,7 @@ export default function BlogInteractive() {
     
     // Like button functionality
     document.querySelectorAll('.like-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function(this: HTMLButtonElement) {
         const currentLikes = parseInt(this.textContent?.match(/\d+/)?.[0] || '0');
         this.textContent = `👍 ${currentLikes + 1}`;
         this.classList.add('liked');
@@ -104,7 +104,7 @@ export default function BlogInteractive() {
     
     // Share functionality
     document.querySelectorAll('.share-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function(this: HTMLButtonElement) {
         const article = this.closest('.article-card') || this.closest('.featured-post');
         const title = article?.querySelector('.article-title')?.textContent || 
                      article?.querySelector('.post-title')?.textContent || '';
