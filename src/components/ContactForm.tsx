@@ -34,13 +34,40 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    // Here you would normally send the data to your backend
+    // Format WhatsApp message
+    const fishTypeText = formData.fishType === 'tilapia' ? 'Fresh Tilapia - ₹280/kg' :
+                         formData.fishType === 'varal' ? 'Fresh Varal Fish - ₹320/kg' :
+                         formData.fishType === 'both' ? 'Both Types (Mixed) - ₹300/kg avg' : formData.fishType;
+
+    const whatsappMessage = `🐟 *New Fish Order Request*
+
+👤 *Customer Details:*
+Name: ${formData.name}
+Phone: ${formData.phone}
+Location: ${formData.location}
+
+🐟 *Order Details:*
+Fish Type: ${fishTypeText}
+Quantity: ${formData.quantity} kg
+
+${formData.message ? `💬 *Special Requirements:*\n${formData.message}\n\n` : ''}📞 *Please call customer within 30 minutes to confirm delivery*
+
+⏰ Order placed: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`;
+
+    // Send to WhatsApp
+    const phoneNumber = '917510940508'; // Your WhatsApp business number
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, '_blank');
+
     console.log('Form submitted:', formData);
     
     setIsSubmitting(false);
     setSubmitted(true);
 
-    // Reset form after 3 seconds
+    // Reset form after 5 seconds
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
@@ -51,7 +78,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         quantity: '2',
         message: ''
       });
-    }, 3000);
+    }, 5000);
   };
 
   if (submitted) {
@@ -59,7 +86,11 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
       <div className={`contact-form-success ${className}`}>
         <div className="success-message">
           <h3>✅ Order Request Sent!</h3>
-          <p>We'll call you within 30 minutes to confirm your order.</p>
+          <p>Your order has been sent via WhatsApp. We'll call you within 30 minutes to confirm your order.</p>
+          <div className="success-actions">
+            <p><strong>📱 WhatsApp message sent to:</strong> +91-7510940508</p>
+            <p><em>You can also call us directly at the same number for instant confirmation.</em></p>
+          </div>
         </div>
       </div>
     );
@@ -286,10 +317,31 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           disabled={isSubmitting}
         >
           <span className="btn-text">
-            {isSubmitting ? 'Sending...' : 'Send Order Request'}
+            {isSubmitting ? 'Sending to WhatsApp...' : 'Send Order via WhatsApp'}
           </span>
-          <span className="btn-icon">📞</span>
+          <span className="btn-icon">📱</span>
         </button>
+        
+        <div className="alternative-actions">
+          <p><strong>Or contact us directly:</strong></p>
+          <div className="direct-contact-buttons">
+            <a 
+              href="tel:+917510940508" 
+              className="btn btn-outline btn-small"
+            >
+              📞 Call Now
+            </a>
+            <a 
+              href="https://wa.me/917510940508?text=Hi! I would like to order fresh fish. Please share your current availability and prices." 
+              className="btn btn-accent btn-small"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 WhatsApp Chat
+            </a>
+          </div>
+        </div>
+
         <p className="form-note">
           <strong>What happens next?</strong><br />
           ✅ We'll call you within 30 minutes to confirm<br />
